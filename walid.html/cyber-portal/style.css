@@ -1,0 +1,83 @@
+body {
+  font-family: Tahoma, sans-serif;
+  direction: rtl;
+  background: linear-gradient(135deg, #0d1117, #161b22); /* تدرج خلفية جميل */
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: rgba(22, 27, 34, 0.9); /* شفافية خفيفة */
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 255, 200, 0.3);
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(5px); /* تأثير ضبابي */
+}
+
+h1 {
+  color: #00ffcc;
+  margin: 0;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7); /* يجعل النص واضح */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 30px;
+}
+
+.card {
+  background: rgba(22, 27, 34, 0.85); /* كارت شبه شفاف */
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 255, 200, 0.2);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s; /* تأثير الحركة عند المرور */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 255, 200, 0.4);
+}
+
+/* تعديل: عنوان أمن الشبكات باللون الأخضر الغامق */
+.card h2.network-title {
+  color: #006400; /* أخضر غامق */
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+  margin-bottom: 15px;
+}
+
+/* بقية العناوين تبقى بنفس اللون */
+.card h2:not(.network-title) {
+  color: #dadada;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+  margin-bottom: 15px;
+}
+
+.card p {
+  text-align: justify;
+  line-height: 1.7;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #22353800;
+  color: #eae7e7;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 10px rgba(0,255,200,0.3);
+}
+
+.card a:hover {
+  background: #0c9cc4;
+  box-shadow: 0 6px 15px rgba(0,255,200,0.5);
+  transform: translateY(-2px);
+}
